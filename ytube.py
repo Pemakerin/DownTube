@@ -48,7 +48,7 @@ class StartFrame(wx.Frame):
 
         self.SetMenuBar(self.menubar)
         
-        self.ico = wx.Icon('/opt/downtube/icon/img_1.png', wx.BITMAP_TYPE_ICO)
+        self.ico = wx.Icon('img_1.png', wx.BITMAP_TYPE_ICO)
         self.SetIcon(self.ico)
 
 
