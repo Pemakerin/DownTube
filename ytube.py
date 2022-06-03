@@ -92,7 +92,7 @@ class StartFrame(wx.Frame):
                 dlg.Destroy()
                 
             elif len(lItems) == 0:
-                main_message = 'Voce não escolher nenhoa QUALIDADE !'
+                main_message = 'Voce não escolher nenhum QUALIDADE !'
                 dlg = GMD.GenericMessageDialog(None, main_message, 'Escolha de Qualidade', agwStyle=wx.ICON_INFORMATION | wx.OK)
                 
                 dlg.ShowModal()
@@ -109,7 +109,7 @@ class StartFrame(wx.Frame):
 
                         print('Download Completed')
                         ShowMessage()
-                    if lItems[0] == str('1'):
+                    elif lItems[0] == str('1'):
                         url = _url
                         video = pytube.YouTube(url)
                         try:
@@ -122,8 +122,22 @@ class StartFrame(wx.Frame):
                             video.streams.get_highest_resolution().download(self.tc_.Value)
                             print('Downlaod Completed')
                             ShowMessage()
-
+                            
                     elif lItems[0] == str('2'):
+                        url = _url
+                        video = pytube.YouTube(url)
+                        try:
+                            video.streams.get_by_itag(137).download(self.tc_.Value)
+                            print('Download Completed')
+                            ShowMessage()
+                        except AttributeError:
+                            video = None
+                            video = pytube.YouTube(url)
+                            video.streams.get_highest_resolution().download(self.tc_.Value)
+                            print('Downlaod Completed')
+                            ShowMessage()
+                    
+                    elif lItems[0] == str('3'):
                         yt = pytube.YouTube(_url)
                         vd = yt.streams.filter(only_audio=True).first()
                         out_file = vd.download(self.tc_.Value)
