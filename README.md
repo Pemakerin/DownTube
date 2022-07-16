@@ -6,7 +6,7 @@ $ chmod 777 install.sh
 
 $ bash install.sh
 
-ele ira instalar todos componentes necerrario para uso diretamente no DeskTop
+Ele irá instalar todos componentes necerrario para uso diretamente no DeskTop ;)
 
 # Use on  Windows
 no cmd do windows caso voce tem instalando o pip do python que é uma instalando de pacotes
