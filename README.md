@@ -1,4 +1,4 @@
-# use on linux
+# Use no linux
 Entre na pasta onde foi baixando o programar DownTube, depois execulte install.sh
 no terminal, como no exemplo abaixo: 
 
@@ -8,11 +8,11 @@ $ bash install.sh
 
 Ele irá instalar todos componentes necerrario para uso diretamente no DeskTop ;)
 
-# Use on  Windows
-no cmd do windows caso voce tem instalando o pip do python que é uma instalando de pacotes
-poder execeute esses comando no CMD:
+# Instalação no Windows
+No cmd do windows caso você tem instalando o pip3 do python3 que é uma instalando de pacotes
+poder executa esses comando no CMD:
 
-C.\ pip install wheel pytube
+C.\ pip3 install wheel pytube
 
-C.\ pip install wxPython
+C.\ pip3 install wxPython
 
